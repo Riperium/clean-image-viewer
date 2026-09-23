@@ -1,5 +1,6 @@
 # Clean Image Viewer
 Enhanced Image Viewer alternative for Chrome
+
 Minimal Chrome extension that replaces the native image viewer with a clean fullscreen viewer for direct images, X and Reddit.
 
 ## Features
