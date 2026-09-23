@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2F\\1"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://www\\.reddit\\.com/media\\?url=https%3A%2F%2F(?:[a-z0-9-]+\\.)*preview\\.redd\\.it%2F(.*)$",
+      "resourceTypes": ["main_frame", "sub_frame"]
+    }
+  }
+]

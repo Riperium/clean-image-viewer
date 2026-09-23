@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Clean Image Viewer",
+  "version": "0.1.0",
+  "description": "Clean fullscreen viewer for direct images, X and Reddit.",
+  "permissions": ["declarativeNetRequest"],
+  "host_permissions": ["https://*.reddit.com/*", "https://reddit.com/*", "https://*.redd.it/*"],
+  "declarative_net_request": {
+    "rule_resources": [{"id":"reddit-normalization","enabled":true,"path":"rules.json"}]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "exclude_matches": ["https://reddit.com/*", "https://*.reddit.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://reddit.com/media*", "https://*.reddit.com/media*", "https://*.redd.it/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
